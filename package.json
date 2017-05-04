@@ -1,0 +1,31 @@
+{
+  "name": "bimartmessage",
+  "version": "1.1.3",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "crypto": "0.0.3",
+    "expect.js": "^0.3.1",
+    "md5": "^2.2.1",
+    "muk": "^0.5.3",
+    "querystring": "^0.2.0",
+    "urllib": "^2.22.0"
+  },
+  "description": "bimart_message",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxlhum/bimart_message.git"
+  },
+  "keywords": [
+    "bimartmessage"
+  ],
+  "author": "Ryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lxlhum/bimart_message/issues"
+  },
+  "homepage": "https://github.com/lxlhum/bimart_message#readme"
+}

@@ -1,44 +1,3 @@
-#票市通对接云之讯短信接口
-
-例子如下
-
-```
-var API = require('bimartmessage');
-/**
- * API构造函数
- * 
- * @param {String} accountSid 开发者账号ID,注册云之讯官网，在控制台中即可获取此参数
- * @param {String} authToken 账户授权令牌,相当于开发者账号ID（Account Sid）的密码,注册云之讯官网，在控制台中即可获取此参数
- */
-var api = new API("accountSid", "authToken");
-/**
- * API-发送验证码接口
- * 
- * @param {String} appId 云之讯不同应用都会有一个唯一的AppId
- * @param {String} code 验证码信息，如果有多个参数则需要写在同一个字符串中，以逗号分隔. （如：param=“a,b,c”）
- * @param {String} templateId 短信模板Id
- * @param {String} phoneNo 接收短信的手机号码
- * @param {Function} callback 回调函数的参数(err, data, res)
- */
-api.identifyingCode("appId", "code", "templateId", "phoneNo", function (err, data, res) {
-    console.log("回调函数");
-    console.log(res.statusCode);
-    console.log(res.headers);
-    console.log(data.toString());
-    var testJson = JSON.parse(data.toString());
-    try {
-        console.log(api.checkConfig[testJson.resp.respCode]);
-    } catch (err) {
-        console.log(err);
-    }
-});
-
-
-
-```
-报错编码
-
-```
 {
     "0": "发送成功",
     "000000": "发送成功",
@@ -82,5 +41,3 @@ api.identifyingCode("appId", "code", "templateId", "phoneNo", function (err, dat
     "105132": "验证码短信参数长度不能超过10位",
     "105139": "补发短信模板不规范"
 }
-```
-
